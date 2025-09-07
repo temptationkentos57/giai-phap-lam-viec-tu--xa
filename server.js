@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error('Error occurred:', err.stack);
-  res.status(500).send('Internal Server Error'); // Updated error message
+  res.status(500).send('An unexpected error occurred. Please try again later.'); // Updated error message
 });
 
 app.listen(PORT, () => {
